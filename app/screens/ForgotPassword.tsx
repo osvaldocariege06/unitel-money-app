@@ -25,7 +25,17 @@ export default function ForgotPassword({ navigation }) {
   return (
     <View className="flex-1 bg-primary px-6 py-10">
       <View className="mb-14 flex flex-row items-center justify-between py-4">
-        <Text className="text-secondary">Voltar</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Login')}
+          className="flex flex-row items-center gap-2"
+        >
+          <Image
+            source={require('../assets/angle-left.jpg')}
+            alt="angle-left"
+            className="h-6 w-6"
+          />
+          <Text className="text-secondary">Voltar</Text>
+        </TouchableOpacity>
         <Text className="text-secondary">Toggle</Text>
       </View>
       <View className="flex flex-col items-center gap-2">
@@ -97,11 +107,13 @@ export default function ForgotPassword({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('Login')}
-          className="mt-4 leading-normal text-secondary"
+          className=" flex w-full cursor-pointer flex-row items-center justify-center"
         >
-          Ainda não tenho uma conta,{' '}
-          <Text className="font-semibold text-main">criar conta</Text>
-        </TouchableOpacity>{' '}
+          <Text className="text-secondary">
+            Ainda não tenho uma conta,{' '}
+            <Text className="font-semibold text-main">criar conta</Text>
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   )

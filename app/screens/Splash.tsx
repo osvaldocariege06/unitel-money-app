@@ -7,7 +7,7 @@ export default function Splash({ navigation }) {
     setTimeout(() => {
       navigation.navigate('Login')
     }, 2000)
-  }, [])
+  }, [navigation])
   return (
     <View className="relative flex-1 items-center bg-primary px-8 py-10">
       <StatusBar style="auto" />

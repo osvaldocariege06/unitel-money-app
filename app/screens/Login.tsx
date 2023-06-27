@@ -79,7 +79,7 @@ export default function Login({ navigation }) {
 
       <Text
         onPress={() => navigation.navigate('ForgotPassword')}
-        className="my-6 mt-4 w-full text-right text-sm text-secondary"
+        className="my-6 mt-4 w-full cursor-pointer text-right text-sm text-secondary"
       >
         Esqueci o meu PIN!
       </Text>
@@ -94,7 +94,10 @@ export default function Login({ navigation }) {
           className="h-6 w-6"
         />
       </TouchableOpacity>
-      <TouchableOpacity className="mt-4 w-full rounded-md bg-transparent p-2 ">
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SignIn')}
+        className="mt-4 w-full cursor-pointer rounded-md bg-transparent p-2 "
+      >
         <Text className=" mx-auto text-secondary">Criar conta</Text>
       </TouchableOpacity>
       <Text className="mt-16 text-sm text-secondary">
