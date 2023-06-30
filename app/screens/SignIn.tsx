@@ -27,7 +27,7 @@ export default function SignIn({ navigation }) {
 
   return (
     <View className="flex-1 bg-primary px-6 py-10">
-      <View className="mb-14 flex flex-row items-center justify-between py-4">
+      <View className="-mt-10 mb-14 flex flex-row items-center justify-between py-4">
         <TouchableOpacity
           onPress={() => navigation.navigate('Login')}
           className="flex flex-row items-center gap-2"
@@ -46,7 +46,7 @@ export default function SignIn({ navigation }) {
         Cria uma conta Unitel Money e faça pagamentos, transfêrencias e muito
         mais sem saires de casa.
       </Text>
-      <View className="mb-6">
+      <View className=" mb-6">
         {/* INPUT NAME */}
         <Controller
           control={control}
@@ -145,9 +145,12 @@ export default function SignIn({ navigation }) {
           className="h-6 w-6"
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-        Já tenho uma conta, fazer login
-      </TouchableOpacity>
+      <Text
+        onPress={() => navigation.navigate('Login')}
+        className="mt-4 text-center text-secondary"
+      >
+        Já tem uma conta, fazer login
+      </Text>
     </View>
   )
 }
